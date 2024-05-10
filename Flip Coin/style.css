@@ -45,7 +45,7 @@ body {
 }
 
 .tails {
-    transform: rotateX(0);
+    transform: rotateY(180deg);
 }
 
 .btns {
@@ -61,6 +61,8 @@ body {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+
 
 button {
     width: 120px;
