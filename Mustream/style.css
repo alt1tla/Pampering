@@ -1,0 +1,140 @@
+.kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #343A40;
+    --main-font-color: #E1E8EB;
+    --main-font-accent-color: #FFC107;
+    --main-accent-color: #7952B3;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: "Kanit", sans-serif;
+    color: var(--main-font-color);
+    font-weight: 300;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+.container .song-info {
+    background-color: var(--main-accent-color);
+    margin: 20px 20px 0px 20px;
+    padding: 20px 20px 5px 200px;
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 3px 5px 12px rgba(255, 255, 255, 0.2);
+}
+
+.container .song-info .song-name {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container .song-info .artist-name {
+    font-size: 14px;
+}
+
+.container .song-info .progress {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container .song-info .progress .fill-bar {
+    width: 10%;
+    height: 6px;
+    border-radius: 20px;
+    background: var(--main-font-accent-color);
+}
+
+.container .song-info .time {
+    font-size: 14px;
+    margin: 20px;
+}
+
+.container .disk {
+    max-width: 120px;
+}
+
+.container .disk .active {
+    animation: gradient 2s ease-in 0s infinite alternate;
+}
+
+.container .disk .cover {
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url("static/billie.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    block-size: cover;
+    border: 3px solid var(--main-font-color);
+    border-radius: 10% 0%;
+    box-shadow: 3px 5px 12px rgba(255, 255, 255, 0.2);
+}
+
+.container .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--main-font-color);
+    margin-left: 20px;
+    width: 200px;
+    height: 35px;
+    border-radius: 0px 0px 20px;
+    box-shadow: 3px 5px 12px rgba(255, 255, 255, 0.2);
+}
+
+.container .controls i {
+    color: var(--main-bg-color);
+    font-size: 20px;
+}
+.container .controls i:hover {
+    color: var(--main-font-accent-color);
+}
+
+
+@keyframes gradient{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 60%;
+    }
+}
