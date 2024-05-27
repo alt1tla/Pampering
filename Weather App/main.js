@@ -20,7 +20,7 @@ let days = [
 let d = new Date();
 let n = d.getDay();
 todayDay.innerText = days[n];
-todayDate.innerText = `${d.getMonth()}.${d.getDate()}.${d.getFullYear()}`;
+todayDate.innerText = `${d}`;
 
 let cel;
 
