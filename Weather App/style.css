@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color:var(--main-bg-color);
+    background-color: var(--main-bg-color);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ body {
     color: var(--main-font-color);
 }
 
-.container{
+.container {
     height: 400px;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
@@ -33,7 +33,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-.left-info{
+.left-info {
     width: 260px;
     height: 100%;
     float: left;
@@ -49,11 +49,11 @@ body {
     transition: all 0.3s ease;
 }
 
-.left-info:hover{
+.left-info:hover {
     transform: scale(1.1);
 }
 
-.today-info{
+.today-info {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ body {
     gap: 5px;
 }
 
-.today-weather{
+.today-weather {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -70,16 +70,16 @@ body {
     left: 20px;
 }
 
-.today-weather .fa-solid{
+.today-weather .fa-solid {
     font-size: 2rem;
 }
 
-.weather-temp{
+.weather-temp {
     font-weight: 700;
     font-size: 3.5rem;
 }
 
-.right-info{
+.right-info {
     float: right;
     position: relative;
     height: 100%;
@@ -88,64 +88,29 @@ body {
     justify-content: space-between;
 }
 
-.day-info{
+.day-info {
     padding: 25px 35px;
     display: flex;
     flex-direction: column;
 }
 
-.day-info div:not(:last-child){
+.day-info div:not(:last-child) {
     margin-bottom: 6px;
 }
 
-.day-info div .title{
+.day-info div .title {
     font-weight: 600;
 }
 
-.day-info div .value{
+.day-info div .value {
     float: right;
 }
 
-.days-list{
-    display: flex;
-    list-style: none;
-    margin: 10px 35px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
-}
-
-.days-list li{
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.days-list li .fa-solid{
-    margin-bottom: 5px;
-    font-size: 2rem;
-}
-
-.days-list li:hover{
-    transform: scale(1.1);
-    background: var(--main-accent-color);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-}
-
-.days-list li .day-temp{
-    margin-top: 6px;
-    font-weight: 600;
-}
-
-.btn-container{
+.btn-container {
     padding: 25px 35px;
 }
 
-.loc-button{
+.loc-button {
     outline: none;
     width: 100%;
     border: none;
@@ -159,7 +124,7 @@ body {
     transition: all 0.3s ease;
 }
 
-#search{
+#search {
     outline: none;
     width: 100%;
     border: none;
@@ -173,12 +138,12 @@ body {
     margin-bottom: 10px;
 }
 
-.loc-button:hover{
+.loc-button:hover {
     transform: scale(1.1);
     background: var(--main-accent-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-i{
+i {
     color: var(--main-font-color);
 }
