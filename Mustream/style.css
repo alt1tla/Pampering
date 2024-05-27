@@ -55,7 +55,8 @@ body {
     margin: 20px 20px 0px 20px;
     padding: 20px 20px 5px 200px;
     border-radius: 20px 0px 20px 0px;
-    box-shadow: 3px 5px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 5px 60px rgba(255, 255, 255, 0.3);
+    width: 400px;
 }
 
 .container .song-info .song-name {
@@ -65,6 +66,7 @@ body {
 
 .container .song-info .artist-name {
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .container .song-info .progress {
@@ -74,7 +76,7 @@ body {
 }
 
 .container .song-info .progress .fill-bar {
-    width: 10%;
+    width: 0%;
     height: 6px;
     border-radius: 20px;
     background: var(--main-font-accent-color);
@@ -82,7 +84,8 @@ body {
 
 .container .song-info .time {
     font-size: 14px;
-    margin: 20px;
+    margin: 20px 10px 20px 0px;
+    text-align: end;
 }
 
 .container .disk {
@@ -105,7 +108,7 @@ body {
     block-size: cover;
     border: 3px solid var(--main-font-color);
     border-radius: 10% 0%;
-    box-shadow: 3px 5px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 5px 60px rgba(255, 255, 255, 0.3);
 }
 
 .container .controls {
@@ -118,12 +121,13 @@ body {
     width: 200px;
     height: 35px;
     border-radius: 0px 0px 20px;
-    box-shadow: 3px 5px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 5px 60px rgba(255, 255, 255, 0.3);
 }
 
 .container .controls i {
     color: var(--main-bg-color);
     font-size: 20px;
+    cursor: pointer;
 }
 .container .controls i:hover {
     color: var(--main-font-accent-color);

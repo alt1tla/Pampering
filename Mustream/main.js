@@ -54,6 +54,8 @@ const songName = document.querySelector('.song-name');
 const progressBar = document.querySelector('.progress');
 const fillBar = document.querySelector('.fill-bar');
 const time = document.querySelector('.time');
+const timeCurrent = document.querySelector('.time-current');
+const timeDuration = document.querySelector('.time-duration');
 const cover = document.querySelector('.cover');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
@@ -65,6 +67,7 @@ let playing = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadSong(currentSong);
+    song.addEventListener('canplay',currentDuration);
     song.addEventListener('timeupdate', updateProgress);
     song.addEventListener('ended', nextSong);
     prevBtn.addEventListener('click', prevSong);
@@ -75,10 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadSong(index) {
     const { name, artist, src, cover: pic } = songsList[index];
-    artistName.innerHTML = artist;
-    songName.innerHTML = name;
+    artistName.innerText = artist;
+    songName.innerText = name;
     song.src = src;
     cover.style.backgroundImage = `url(${pic})`;
+}
+
+function currentDuration(){
+    if (song.duration){
+        const duration = formatTime(song.duration);
+        timeDuration.innerHTML = `${duration}`;
+    }
 }
 
 function updateProgress() {
@@ -86,28 +96,27 @@ function updateProgress() {
         const pos = (song.currentTime / song.duration) * 100;
         fillBar.style.width = `${pos}%`;
 
-        const duration = formatTime(song.duration);
         const currentTime = formatTime(song.currentTime);
-        time.innerHTML = `${currentTime} - ${duration}`;
+        timeCurrent.innerText = `${currentTime}`;
     }
 }
 
 function formatTime(duration) {
     const minutes = Math.floor(duration / 60);
     const seconds = Math.floor(duration % 60);
-    return `${minutes}:${seconds<10? "0": ""}${seconds}`
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`
 }
 
-function togglePlayPause(){
+function togglePlayPause() {
     if (playing) {
         song.pause();
     } else {
         song.play();
     }
     playing = !playing;
-    playBtn.classList.toggle('fa-pause',playing);
-    playBtn.classList.toggle('fa-play',!playing);
-    cover.classList.toggle("active",playing);
+    playBtn.classList.toggle('fa-pause', playing);
+    playBtn.classList.toggle('fa-play', !playing);
+    cover.classList.toggle("active", playing);
 }
 
 function nextSong() {
@@ -115,21 +124,21 @@ function nextSong() {
     playMusic();
 }
 
-function prevSong(){
+function prevSong() {
     currentSong = (currentSong - 1 + songsList.length) % songsList.length;
     playMusic();
 }
 
-function playMusic(){
+function playMusic() {
     loadSong(currentSong);
     song.play();
-    playing=true;
-    playBtn.classList.add('fa-play');
-    playBtn.classList.remove('fa-pause');
+    playing = true;
+    playBtn.classList.remove('fa-play');
+    playBtn.classList.add('fa-pause');
     cover.classList.add("active");
 }
 
-function seek(e){
+function seek(e) {
     const pos = (e.offsetX / progressBar.clientWidth) * song.duration;
     song.currentTime = pos;
 }
