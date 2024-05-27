@@ -55,7 +55,7 @@ body {
     margin: 20px 20px 0px 20px;
     padding: 20px 20px 5px 200px;
     border-radius: 20px 0px 20px 0px;
-    box-shadow: 3px 5px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     width: 400px;
 }
 
@@ -108,7 +108,7 @@ body {
     block-size: cover;
     border: 3px solid var(--main-font-color);
     border-radius: 10% 0%;
-    box-shadow: 3px 5px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .container .controls {
@@ -121,7 +121,7 @@ body {
     width: 200px;
     height: 35px;
     border-radius: 0px 0px 20px;
-    box-shadow: 3px 5px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .container .controls i {

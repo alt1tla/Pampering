@@ -17,12 +17,27 @@ let days = [
     'Sunday'
 ];
 
+let mounths = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'June',
+    'July',
+    'Aug',
+    'Sept',
+    'Oct',
+    'Now',
+    'Dec'
+];
+
 let d = new Date();
 let n = d.getDay();
+let m = d.getMonth();
 todayDay.innerText = days[n];
-todayDate.innerText = `${d}`;
+todayDate.innerText = `${d.getDate()} ${mounths[m]} ${d.getFullYear()}`;
 
-let cel;
 
 async function checkWeather(city) {
     try {
