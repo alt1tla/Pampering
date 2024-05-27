@@ -67,5 +67,6 @@ searchButton.addEventListener("click", () => {
     const city = searchBox.value.trim();
     if (city !== "") {
         checkWeather(city);
+        searchBox.value = '';
     }
 });
