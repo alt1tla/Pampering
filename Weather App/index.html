@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/ae8734ff0d.js" crossorigin="anonymous"></script>
+    <title>The weather</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-info">
+            <div class="today-info">
+                <h2 class="today-day"></h2>
+                <span>date: <span class="today-date"></span></span>
+            </div>
+            <div class="today-weather">
+                <i id="weather-icon" class="fa-solid fa-location-crosshairs"></i>
+                <h1 class="weather-temp">T°C</h1>
+                <h3 class="weather-main">weather</h3>
+            </div>
+        </div>
+
+        <div class="right-info">
+            <div class="day-info">
+                <div>
+                    <span class="title">CITY</span>
+                    <span class="value city"></span>
+                </div>
+                <div>
+                    <span class="title">PRESSURE</span>
+                    <span class="value pressure"></span>
+                </div>
+                <div>
+                    <span class="title">HUMIDITY</span>
+                    <span class="value humidity"></span>
+                </div>
+                <div>
+                    <span class="title">WIND SPEED</span>
+                    <span class="value wind-speed"></span>
+                </div>
+                <div>
+                    <span class="title">TEMP MIN</span>
+                    <span class="value temp-min"></span>
+                </div>
+                <div>
+                    <span class="title">TEMP MAX</span>
+                    <span class="value temp-max"></span>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <input id="search" type="text" placeholder="Moscow">
+                <button class="loc-button">Search Location</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
