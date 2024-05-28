@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #343A40;
+    --main-font-color: #E1E8EB;
+    --main-font-accent-color: #FFC107;
+    --main-accent-color: #7952B3;
+}
+
+body {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+}
+
+.container {
+    min-width: 400px;
+    height: 200px;
+
+}
+
+.container .score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.container .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .controls button {
+    border: none;
+    cursor: pointer;
+}
+
+.container .controls i {
+    font-size: 3rem;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+}
+
+.container .controls i:hover {
+    transform: scale(1.2) perspective(200px);
+    transition: all 0.5s ease;
+    color: var(--main-accent-color);
+}
+
+.text{
+    font-weight: 800;
+}
+
+@keyframes hint{
+    0%{
+        color: var(--main-font-color);
+    }
+    100%{
+        color: var(--main-accent-color);
+    }
+}
