@@ -33,12 +33,18 @@ function playGame(playerChoice) {
                 result = (computerChoice === "paper" || computerChoice === "lizard") ? "YOU WIN!" : "YOU LOSE!";
                 break;
             case "lizard":
-                result = (computerChoice === "paper" || computerChoice === "spock") ? "YOU WIN!": "YOU LOSE!";
+                result = (computerChoice === "paper" || computerChoice === "spock") ? "YOU WIN!" : "YOU LOSE!";
                 break;
             case "spock":
                 result = (computerChoice === "rock" || computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
                 break;
 
+        }
+        switch (result) {
+            case "YOU WIN!":
+                wins += 1;
+            case "YOU LOSE!":
+                losses += 1;
         }
     }
 
