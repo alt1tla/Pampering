@@ -11,12 +11,12 @@ flipBtn.addEventListener("click", () => {
         setTimeout(function () {
             coin.style.animation = "flip-heads 3s forwards";
         }, 100);
-        tails++;
+        heads++;
     } else {
         setTimeout(function () {
             coin.style.animation = "flip-tails 3s forwards";
         }, 100);
-        heads++;
+        tails++;
     }
     setTimeout(updateStats, 3000);
     disableButton();

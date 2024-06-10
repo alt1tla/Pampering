@@ -40,13 +40,11 @@ function playGame(playerChoice) {
                 break;
 
         }
-        switch (result) {
-            case "YOU WIN!":
-                wins += 1;
-            case "YOU LOSE!":
-                losses += 1;
-        }
+        
+        result === "YOU WIN!" ? wins += 1 : losses += 1;
     }
+
+    
 
     rounds += 1;
 
